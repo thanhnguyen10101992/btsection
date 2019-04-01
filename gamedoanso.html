@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script>
+		function myFunction() {
+		  
+		  var m= Number(prompt("nhập số nhỏ", ""));
+		  var n=Number(prompt("nhập số lớn", ""));
+		  num = Math.floor(m + (1+n-m)*Math.random())
+		  document.getElementById("sodchon").innerHTML =num; 
+		  for(var i=0;i<3;i++){
+		  	var socandoan= Number(prompt("nhập số cần đoán", ""));
+
+		  	if(socandoan==num){
+		  		document.getElementById("demo").innerHTML ='Bạn đã đoán đúng'; 
+		  		break;
+		  	}
+		  	if(socandoan>num){
+		  		alert('số cần đoán lớn hơn');
+		  	}
+		  	if(socandoan<num){
+		  		alert('số cần đoán nhỏ hơn');
+		  	}
+
+		  	document.getElementById("demo").innerHTML ='Bạn đã chưa đúng';
+		  }
+		  
+		  console.log('ok',num)
+		  
+		  
+		}
+	</script>
+ 	
+</head>
+
+<body>
+
+	<button onclick="myFunction()">Chơi</button>
+	<p id="sodchon"></p>
+	<p id="demo"></p>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+	 	function f(n) {
+			var s = 0;
+			if(n == 0) return(s);
+			if(n == 1) {
+			s += 1;
+			return(s);
+			}
+			else {
+			return(f(n - 1) + f(n - 2));
+			   }
+		}
+		function show(n) {
+			var sum =0;
+			var i;
+			for(i = 0; i <= n; i++) {
+				f1.s.value += "  " + f(i);
+				console.log('ok',f(i))
+				var sum=sum+f(i);
+			  }
+			document.getElementById("demo").innerHTML =
+		    sum;  
+		}
+ 	</script>
+ 	
+</head>
+
+<body>
+
+	<form name=f1>
+		nhập số lương : <input type=text size=4 name="n"> 
+		<input type=button value="Nhập" onClick="show(f1.n.value);"> 
+		<input type=reset value="Reset"><br>
+		Dảy Số: <input type=text size="70" name="s"><br>
+		<span>Tổng : </span><span id="demo"></span>
+	</form>
+	
+
+
+</body>
+</html>

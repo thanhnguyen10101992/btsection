@@ -1,17 +1,7 @@
 $(document).ready(function(){
-
-  var sout ="<table border='1' width='600' cellspacing='0' cellpadding='3'>";
-  for(var i =2;i<10;i++){
-    sout=sout+"<tr>"
-    for(var j=1;j<10;j++){
-      var a=i*j
-      sout=sout+"<td>"+j+'x'+i+'='+i*j+ "</td>"
-    }
-    sout=sout +"</tr>"
-  }
-  sout=sout+"</table>"
-
-  document.write(sout)
+  
+  
+  
 
   $("#tinhdiemtb").click(function(){
     var a=Number($("#diemtoan").val());

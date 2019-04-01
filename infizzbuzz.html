@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 	window.onload = function what(){
+ 		var a='';
+ 		var b='';
+ 		var c='';
+ 		for (var i=1;i<=100;i++){
+		    if(Number(i)%3==0){
+		    	var a=a+' '+'fizz';
+		    }
+		    if(Number(i)%5==0){
+		    	var b=b+' '+'buzz';
+		    }
+		    if(Number(i)%3==0&&Number(i)%5==0  ){
+		    	var c=c+' '+'fizzbuzz';
+		    }
+		  }
+		  document.getElementById("demo").innerHTML =a ;  
+		  document.getElementById("chiahet5").innerHTML =b ;  
+		  document.getElementById("chiahet5va3").innerHTML =c ;  
+		  
+	};
+ 		
+ 	</script>
+ 	
+</head>
+
+<body>
+
+	Chia hết cho 3:<span id="demo"></span><br>
+	Chia hết cho 5 :<span id="chiahet5"></span><br>
+	Chia hết cho 3 và 5 :<span id="chiahet5va3"></span><br>
+
+</body>
+</html>
