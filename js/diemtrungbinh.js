@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $("#tinhdiemtb").click(function(){
     var a=Number($("#diemtoan").val());
     var b=Number($("#diemly").val());
@@ -118,5 +119,16 @@ $(document).ready(function(){
         alert('Obese')
       }
    })
+
+   $('#btnYes').click(function(){
+      alert('Yes. you are right ')
+   })
+
+   $( "#btnNo" ).mouseover(function() {
+    var x = Math.floor((Math.random() * 300) + 200);
+    console.log('abc',x)
+    $( "#btnNo" ).css("left",x+'px');
+    $( "#btnNo" ).css("top",x+'px');
+  });
 
 });	
