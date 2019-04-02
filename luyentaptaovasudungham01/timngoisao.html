@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			function kiemtratontai(){
+
+ 			}
+ 			var manga=['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+ 			var mangb=['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+ 			
+ 			$('#nhapngoisao').click(function(){
+ 				var tenngoisao = prompt("Please enter your name", "");
+ 				console.log('ok',tenngoisao);
+ 				var index= manga.indexOf(tenngoisao);
+ 				if(index>=0){
+ 					alert(mangb[index]);
+ 				}else{
+ 					alert('không có trong mảng')
+ 				}
+ 			})
+ 			
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+
+<button id="nhapngoisao">Nhập</button>
+
+
+</body>
+</html>

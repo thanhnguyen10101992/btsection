@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			var mangchua=["Sony Xperia","Samsung Galaxy","Nokia 6","Xiaomi Redmi Note 4","Apple iPhone 6S","Xiaomi Mi 5s Plus","Apple iPhone 8 Plus","Fujitsu F-04E","Oppo A71"]
+ 			
+ 			$('#addsanpham').click(function(){
+ 				var a=$('#giatrithemvao').val();
+ 				mangchua.push(a);	
+ 				loadtml();
+ 			});
+ 			console.log('mangchua',mangchua)
+ 			function loadtml(){
+
+ 				  var sout ="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+				  for(var i =0;i<mangchua.length;i++){
+				    sout=sout+"<tr>"
+				    sout=sout+"<td>" +mangchua[i]+"</td>"
+				    sout=sout+"<td>"+"<button "+"class"+"="+"sua"+ " "+"value="+i+ ">"+"edit"+"</td>"	
+				    sout=sout+"<td>"+"<button "+"class"+"="+"delete"+ " "+"value="+i+ ">"+"delete"+"</td>"	
+				    // sout=sout+"<td>"+"<button class='xoa'>delete</button>"+"</td>" 	
+				    sout=sout +"</tr>"
+
+				    
+				  }
+				  sout=sout+"</table>"
+
+				  $('.tbmange').html(sout);
+				  $('.delete').click(function(){
+	 				console.log('ok',$(this).attr('value'))	
+	 				mangchua.splice( Number($(this).val()),1);
+	 				loadtml();
+	 				console.log('mangchua2',mangchua)
+	 			})
+				  $('.sua').click(function(){
+					// $('#' + fieldID).val(mangchua[Number($(this).val())]);
+	 				// console.log('ok',$(this).attr('value'),Number($(this).val()))
+	 				var index=	Number($(this).val());
+	 				$('.suaptmangip').val(mangchua[Number($(this).val())]);
+	 				$('#suasanpham').click(function(){
+	 					mangchua[Number(index)]=$('.suaptmangip').val();
+	 					var a=$('.suaptmangip').val()
+	 					console.log(index,a)
+	 					loadtml();
+	 				})
+	 				
+	 				
+	 			})
+				 
+	 		}
+ 			loadtml();
+ 			
+ 			
+ 			
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+	<div>
+		<h1>Add New Product</h1>
+		<div class="ipthem">
+			<input type="text" name="" id="giatrithemvao">
+			<input type="button" value="add" name="" id="addsanpham">
+		</div>
+		<div class="tbmang">
+			<div class="tbmange"></div>
+		</div>
+		<div class="suapt">
+			<input type="text" name="" class="suaptmangip" value="">
+			<input type="button" value="sua" name="" id="suasanpham">
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

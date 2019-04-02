@@ -15,13 +15,16 @@
  				var mangmoi=[];
  				for(var i=0;i<mangchuoi.length;i++){
  					if(mangchuoi[i]=='-'){
- 						mangchuoi[i]='_';
+ 						mangmoi[i]='_';
  						console.log('ok2323',i,mangchuoi[i]);
 
  					}
+ 					else{
+ 						mangmoi[i]=mangchuoi[i];
+ 					}
  				}
- 				console.log('ok',mangchuoi);
- 				$('.sosotrongchuoi').html(mangchuoi)
+ 				console.log('ok',mangmoi);
+ 				$('.sosotrongchuoi').html(mangmoi.toString())
  			})
  			
  			
