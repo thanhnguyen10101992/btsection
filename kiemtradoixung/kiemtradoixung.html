@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		  $(document).ready(function(){
+
+ 		  	function checkPalindrome(inputString) {
+    
+			    if (inputString.length==1){
+			        return true;
+			    }else{
+			        
+			       if(inputString.length % 2==0) {
+			        var a=inputString.slice(0,inputString.length/2)
+			        var b=inputString.slice(inputString.length/2,inputString.length)
+			        var c=b.split('');
+			        var d=c.reverse();
+			        var dn=d.join('');
+			           
+			        if(a===dn){
+			            return true;
+			        }else{
+			            return false;
+			        }
+			       }else{
+			            var a=Math.floor(inputString.length/2);
+			            var b=inputString.slice(0,a);
+			            var c=inputString.slice(a+1,inputString.length)
+			            var d=c.split('');
+			            var e=d.reverse();
+			            var en=e.join('');
+			           if(b===en){
+			               return true;
+			           }else{
+			               return false;
+			           }
+			       }
+			    }
+			}
+
+			$('.nhapchuoi').click(function(){
+				 var chuoi = prompt("Vui lòng nhập chuổi", "");
+				 checkPalindrome(chuoi);
+				 alert(checkPalindrome(chuoi))
+			})
+
+ 		  })
+ 	</script>
+
+ 	
+</head>
+
+<body>
+
+
+
+<button class="nhapchuoi">Nhập chuổi</button>
+
+</body>
+</html>
