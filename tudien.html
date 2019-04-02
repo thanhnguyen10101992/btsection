@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		function myFunction() {
+
+ 			var a=['xin chào','tạm biệt','tuổi'];
+ 			console.log('a',a)
+ 			var b=['hello','goodbye','age']
+ 			var tucantim = document.getElementById("tucantim").value;
+ 			var n = b.indexOf(tucantim);
+ 			if(n>-1){
+ 				alert('nghỉa là'+ a[n])
+ 				console.log('áds',a[n])
+ 			}else{
+ 				alert('ko có trong từ điển')
+ 			}
+ 			
+ 		}
+		
+ 	</script>
+ 	
+</head>
+
+<body>
+
+
+  Nhập từ cần tìm: <input type="text" name="" id="tucantim"><br>
+  <button onclick="myFunction()">Tìm</button>
+
+	
+	
+
+
+</body>
+</html>

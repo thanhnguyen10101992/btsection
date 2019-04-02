@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
+  <meta charset="UTF-8">
+  <script>
+    function myFunction() {
+      var str= prompt("Nhập chử", "");
+      var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+      var result = [];
+        
+        for(var x=0; x<str.length; x++)
+        {
+          if(UPPER.indexOf(str[x]) !== -1)
+          {
+            result.push(str[x].toLowerCase());
+          }
+          else if(LOWER.indexOf(str[x]) !== -1)
+          {
+            result.push(str[x].toUpperCase());
+          }
+          else 
+          {
+            result.push(str[x]);
+          }
+        }
+      alert(result.join(''));
+     }
+  </script>
+  
+</head>
+
+<body>
+
+  <button onclick="myFunction()">Nhập chử</button>
+  
+
+
+</body>
+</html>

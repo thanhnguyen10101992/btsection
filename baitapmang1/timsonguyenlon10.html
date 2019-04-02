@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+		 	// $("#textarea").keyup(function(){
+		 	// 	var a=$("#textarea").val();
+		 	// 	const str = a.toString();
+		 	// 	for(var i=0;i<=str.length;i++){
+
+		 	// 	}
+		 	// 	console.log('a',i);
+		 	// 	var b='Tôi Là Thằng Ngôc ahihi !!!!';
+		 	// 	var bb=b.toString();
+		 	// 	var bbb=[]
+		 	// 	for(var j=0;j<=i;j++){
+		 	// 		bbb.push(bb[j])
+		 	// 	}
+		 	// 	console.log('okkk',bbb.join(''))
+			 //    document.getElementById("textarea").value = bbb.join('');
+			 //    if(bbb.join('').length==b.length){
+			 //    	document.getElementById("textarea").value = '';
+			 //    }
+			 // });
+
+			 var a=[];
+			 var b=0;
+			 var c='';
+			 for(var i=0;i<=9;i++){
+			 	num = Math.floor(-10 + (1+40- -10)*Math.random());
+			 	a.push(num);
+			 }
+			 console.log('ok',a);
+			 for(var i=0;i<a.length;i++){
+			 	var c=c+' '+a[i];
+			 	if(a[i]>=10){
+			 		b=b+1;
+			 	}
+			 }
+			 console.log('ok',b,c);
+			 $("#hienthimang").html(c);
+			 $("#demo").html(b);
+
+		});
+	</script>
+		
+ 	
+</head>
+
+<body>
+
+	<label>các số trong mảng:</label>
+	<span id="hienthimang"></span></br>
+	<label>Số lơn hơn băng 10:</label> <span id="demo"></span>
+
+	
+	
+
+
+</body>
+</html>

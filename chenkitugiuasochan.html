@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script>
+		function myFunction() {
+		  var so= prompt("Nhập số", "");
+		  
+		  const str = so.toString();
+			const result = [str[0]];
+			  
+			for(let x=1; x<str.length; x++)
+			  {
+			    if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+			     {
+			      result.push('-', str[x]);
+			     }
+			    else
+			     {
+			      result.push(str[x]);
+			     }
+			  }
+			alert(result.join(''));
+		 }
+	</script>
+ 	
+</head>
+
+<body>
+
+	<button onclick="myFunction()">Nhập số</button>
+	
+
+
+</body>
+</html>

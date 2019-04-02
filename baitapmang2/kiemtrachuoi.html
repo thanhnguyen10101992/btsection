@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			
+ 			$('#tinhcss').click(function(){
+ 				var chuoi1=$('#nhapchuoi1').val();
+ 				var chuoi2=$('#nhapchuoi2').val();
+ 				console.log('okk',chuoi1,chuoi2)
+ 				if(chuoi1==chuoi2){
+ 					$('.thongbao').html('<h3> 2 Chuổi giống nhau</h3>');
+ 					console.log
+
+ 				} else{
+ 					$('.thongbao').html('<h3> 2  Chuổi không giống nhau</h3>');
+ 				}
+ 			})
+ 			
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+<h1>Kiểm tra 2 chuổi</h1>
+Chuổi1: <input type="text" id="nhapchuoi1" name="chuoi1" value="">
+Chuổi2: <input type="text" id="nhapchuoi2" name="chuoi2" value="">
+
+<button id="tinhcss">Kiểm tra</button><br>
+<label>Thôngbáo:</label>
+<p class="thongbao"></p>
+
+
+
+</body>
+</html>

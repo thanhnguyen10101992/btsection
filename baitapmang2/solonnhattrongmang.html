@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+		 	// $("#textarea").keyup(function(){
+		 	// 	var a=$("#textarea").val();
+		 	// 	const str = a.toString();
+		 	// 	for(var i=0;i<=str.length;i++){
+
+		 	// 	}
+		 	// 	console.log('a',i);
+		 	// 	var b='Tôi Là Thằng Ngôc ahihi !!!!';
+		 	// 	var bb=b.toString();
+		 	// 	var bbb=[]
+		 	// 	for(var j=0;j<=i;j++){
+		 	// 		bbb.push(bb[j])
+		 	// 	}
+		 	// 	console.log('okkk',bbb.join(''))
+			 //    document.getElementById("textarea").value = bbb.join('');
+			 //    if(bbb.join('').length==b.length){
+			 //    	document.getElementById("textarea").value = '';
+			 //    }
+			 // });
+
+			 var a=[];
+			 var b=0;
+			 var c='';
+			 for(var i=0;i<=9;i++){
+			 	num = Math.floor(-10 + (1+40- -10)*Math.random());
+			 	a.push(num);
+			 }
+			 console.log('ok',a);
+			 var srd=Math.floor(-10 + (1+40- -10)*Math.random());
+			 let max = a[0];
+			 let index = 0;
+			 sum=0;
+			 for(var i=0;i<a.length;i++){
+			 	var c=c+' '+a[i];
+			 	sum=(sum+a[i]);
+			 	 if (a[i] > max) {
+			        max = a[i];
+			        index = i;
+			    }
+			 }
+			 nxh = a.indexOf(srd);
+			 console.log(nxh,srd)
+			 if(nxh>=0){
+			 	$("#demo4").html(srd +'có trong mảng');
+			 }else{
+			 	$("#demo4").html(srd +'không có trong mảng');
+			 }
+			 var sum=sum/a.length;
+			 console.log('ok',sum);
+			 $("#hienthimang").html(c);
+			 $("#demo").html(max);
+			 $("#demo1").html(index);
+			 $("#demo2").html(sum);
+			 $("#demo3").html(srd);
+
+			 $('#sapxepmang').click(function(){
+			 	a.sort(function(a, b){return a-b});
+			 	document.getElementById("showsxm").innerHTML = a;
+			 })
+			
+
+		});
+	</script>
+		
+ 	
+</head>
+
+<body>
+
+	<label>các số trong mảng:</label>
+	<span id="hienthimang"></span></br>
+	<label>Số lơn nhất trong mảng là:</label> <span id="demo"></span></br>
+	<label>Ở vị trí là:</label> <span id="demo1"></span></br>
+	<label>Giá trị trung bình là</label><span id="demo2"></span><br>
+	<label>Số vừa random</label><span id="demo3"></span><br>
+	<span id="demo4"></span><br>	
+	<button id="sapxepmang">Sắp xếp</button>
+	<span id="showsxm"></span>
+
+	
+	
+
+
+</body>
+</html>

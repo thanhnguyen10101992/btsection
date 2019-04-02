@@ -134,4 +134,18 @@ $(document).ready(function(){
     $( "#btnNo" ).css("top",x+'px');
   });
 
+   $('#clicknhap').click(function(){
+       var sonhap=Number($("#nhapso").val());
+       var giaithua=1;
+       console.log('ok',sonhap);
+
+       for(let i=1;i<=sonhap;i++){
+        var giaithua=giaithua*i;
+
+       }
+       console.log('ok123',giaithua)
+       // $("#demo").append(giaithua);
+       alert(giaithua)
+   })
+
 });	

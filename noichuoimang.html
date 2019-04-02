@@ -7,26 +7,22 @@
 	<script type="text/javascript" src="../codegymbt/js/diemtrungbinh.js"></script>
  	<meta charset="UTF-8">
  	<script type="text/javascript">
- 		  var sout ="<table border='1' width='600' cellspacing='0' cellpadding='3'>";
-		  for(var i =2;i<10;i++){
-		    sout=sout+"<tr>"
-		    for(var j=1;j<10;j++){
-		      sout=sout+"<td>"+j+'x'+i+'='+i*j+ "</td>"
-		    }
-		    sout=sout +"</tr>"
-		  }
-		  sout=sout+"</table>"
+ 		var stringmange='';
+	 	var myColor = ["Red", "Green", "White", "Black"];
+	 	for(var i=0;i<myColor.length;i++){
+	 		stringmange=stringmange+myColor[i]+',';
 
-		  document.write(sout)
+	 	}
+	 	alert(stringmange)
+		
  	</script>
-
  	
 </head>
 
 <body>
 
 	
-
+	
 
 
 </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			var mangchuasnt=[];
+ 			function isPrime(num) {
+
+			  if (num === 2) {
+			    return true;
+			  }
+			  else if(num > 1){
+			    for (var i = 2;  i < num; i++) {
+
+			      if (num % i !== 0 ) {
+			        return true;
+			      }
+
+			      else if (num === i * i) {
+			        return false
+			      }
+
+			      else {
+			        return false;
+			      }
+			    }
+			  }
+			  else {
+			    return false;
+			  }
+
+			}
+			for(var i=1;i<=30;i++){
+				if(isPrime(i)==true){
+					mangchuasnt.push(i);
+				}
+			}
+
+			var abc='';
+			for(var j=0;j<mangchuasnt.length;j++){
+				var abc=abc+' '+mangchuasnt[j]
+			}
+			
+			$('.sosotrongchuoi').html(abc)	
+ 			
+ 		});
+			
+ 	</script>
+ 	
+</head>
+
+<body>
+
+<h1>Các số nguyên tố nhỏ hơn 30</h1>
+
+<p class="sosotrongchuoi"></p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			
+ 			$('#tinhcss').click(function(){
+ 				var chuoi=$('#nhapchuoi').val();
+ 				var mangchuoi=chuoi.toString();
+ 				var mangmoi=[];
+ 				for(var i=0;i<mangchuoi.length;i++){
+ 					if(mangchuoi[i]=='-'){
+ 						mangchuoi[i]='_';
+ 						console.log('ok2323',i,mangchuoi[i]);
+
+ 					}
+ 				}
+ 				console.log('ok',mangchuoi);
+ 				$('.sosotrongchuoi').html(mangchuoi)
+ 			})
+ 			
+ 			
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+<h1>Nhập chuổi</h1>
+<input type="text" id="nhapchuoi" name="chuoi" value="">
+
+<button id="tinhcss">Tính</button><br>
+<label>mảng nhân dc</label>
+<p class="sosotrongchuoi"></p>
+
+
+
+</body>
+</html>

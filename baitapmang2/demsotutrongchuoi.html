@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			
+ 			$('#tinhcss').click(function(){
+ 				var a='qwertyuiopasdfghjklzxcvbnm';
+ 				var so='0123456789';
+ 				var mangso=so.toString();
+ 				// var mangso='';
+	 			var arr=a.toString();
+	 			var mangchuakitu=[];
+	 			var mangchuaso=[];
+ 				var chuoi=$('#nhapchuoi').val();
+ 				var b=chuoi.toString();
+ 				for(var i=0;i<b.length;i++){
+ 					var index=a.indexOf(b[i]);
+ 					var index1=mangso.indexOf(b[i])
+ 					console.log('ok1232132131',index1)
+ 					if(index>=0){
+ 						mangchuakitu.push(b[i])
+ 					}
+ 					if(index1>=0){
+ 						mangchuaso.push(b[i]);
+ 					}
+
+ 					
+ 				}
+ 				console.log('ok',mangchuaso)
+ 				$('.sotutrongchuoi').html(mangchuakitu.length);
+ 				$('.sosotrongchuoi').html(mangchuaso.length);
+ 			})
+ 			
+ 			
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+<h1>Nhập chuổi</h1>
+<input type="text" id="nhapchuoi" name="chuoi" value="">
+
+<button id="tinhcss">Tính</button><br>
+<label>Số từ trong chuổi là:</label>
+<p class="sotutrongchuoi"></p><br>
+<label>Số số trong chuổi là:</label>
+<p class="sosotrongchuoi"></p>
+
+
+
+</body>
+</html>
