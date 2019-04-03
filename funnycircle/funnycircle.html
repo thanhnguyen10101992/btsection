@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 		// 	function Circle(x, y, radius){
+			//    this.x = x;
+			//    this.y = y;
+			//    this.radius = radius;
+			// }
+			// function createCircle(){
+			//     var ctx = document.getElementById("myCanvas").getContext("2d");
+			//     var circle= new Circle(500, 500, 80);
+			//     ctx.beginPath();
+			//     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+			//     ctx.fill();
+			// }
+			function Circle(x, y, radius){
+			   this.x = x;
+			   this.y = y;
+			   this.radius = radius;
+			}
+			function createCircle(){
+			    var ctx = document.getElementById("myCanvas").getContext("2d");
+			    var radius = Math.floor(Math.random() * 80);
+			    var circle= new Circle(500, 500, radius);
+			    ctx.beginPath();
+			    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+			    ctx.fill();
+			}
+
+			createCircle();
+ 			
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+
+	<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+
+
+</body>
+</html>

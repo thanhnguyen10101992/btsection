@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			let Dc = function(dc) {
+		        this.doC=dc;
+
+			};
+			
+ 			let dc = new Dc(25);
+
+ 			function chuyendfquac(c){
+ 				var f=(9/5)*c+32
+ 				return f;
+ 			}
+
+ 			function chuyendcquk(c){
+ 				var k=c+273.15
+ 				return k;
+ 			}
+
+ 			console.log('ok',dc)
+
+			alert(chuyendfquac(dc.doC)+'  '+chuyendcquk(dc.doC))	
+
+			
+			 		
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+
+	
+
+
+
+</body>
+</html>

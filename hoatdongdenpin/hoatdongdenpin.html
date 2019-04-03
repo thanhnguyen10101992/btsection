@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			
+ 			var Battery = function () {
+
+			    this.setEnergy = function (energy) {
+			        this.energy = energy;
+			    };
+
+			    this.getEnergy = function () {
+			        return this.energy;
+			    };
+
+			    this.decreaseEnergy = function () {
+			        if (this.energy > 0) {
+			            this.energy--;
+			        }
+			    }
+			};
+
+			var FlashLamp = function () {
+
+			    this.setBattery = function (battery) {
+			        this.battery = battery;
+			    };
+
+			    this.getBatteryInfo = function () {
+			        return this.battery.getEnergy();
+			    };
+
+			    this.light = function () {
+			        if(this.status){
+			            alert("Lighting");
+			        } else {
+			            alert("Not lighting");
+			        }
+			    };
+
+			    this.turnOn = function () {
+			        this.status = true;
+			    };
+			    
+			    this.turnOff = function () {
+			        this.status = false;
+			    }
+			};
+
+
+			var battery = new Battery();
+			console.log('ok',battery)
+			battery.setEnergy(10);
+
+			var flashLamp = new FlashLamp();
+			flashLamp.setBattery(battery);
+
+			document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+			flashLamp.light();
+
+			document.write("Turn on<br/>")
+			flashLamp.turnOn();
+			flashLamp.light();
+			document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+			document.write("Turn off<br/>")
+			flashLamp.turnOff();
+			flashLamp.light();
+
+		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+
+
+
+
+</body>
+</html>

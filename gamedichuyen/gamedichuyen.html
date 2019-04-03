@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Objects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+    <script>
+    	$(document).ready(function(){
+
+
+			function Hero(image, top, left, size){
+			  this.image = image;
+			  this.top = top;
+			  this.left = left;
+			  this.size = size;
+
+			  this.getHeroElement = function(){
+			    return '<img width="'+ this.size + '"' +
+			      ' height="'+ this.size + '"' +
+			      ' src="' + '../image/pikachu.jpg' +'"' +
+			      ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+			  }
+
+			  this.moveRight = function(){
+			    this.left += 20;
+			    console.log('ok: ' + this.left);
+			  }
+
+			}
+
+			var hero = new Hero('pikachu.png', 20, 30, 200);
+
+			function start(){
+			  if(hero.left < window.innerWidth - hero.size){
+			    hero.moveRight();
+			  }
+			  document.getElementById('game').innerHTML = hero.getHeroElement();
+			  setTimeout(start, 500)
+			}
+
+			start();
+    	})
+
+    </script>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+  </body>
+</html>

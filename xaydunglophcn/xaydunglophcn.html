@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/diemtrungbinh.js"></script>
+ 	<meta charset="UTF-8">
+ 	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			let Rectangle = function(chieudai,chieurong) {
+		        this.chieudai=chieudai;
+		        this.chieurong=chieurong;
+
+			};
+
+			function scn(a,b){
+				var s=a*b;
+				return s;
+			}
+			function cvhcn(a,b){
+				var cv=(a+b)*2;
+				return cv;
+			}
+ 			let rectangle = new Rectangle(150,100);
+			// Rectangle(5,10);
+			console.log('ok',rectangle.chieudai)
+ 			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.rect(20, 20, rectangle.chieudai, rectangle.chieurong);
+
+			ctx.stroke();
+
+
+			alert(scn(rectangle.chieudai,rectangle.chieurong)+'   '+cvhcn(rectangle.chieudai,rectangle.chieurong))
+
+
+			
+
+			
+			 		
+ 		});
+ 	</script>
+ 	
+</head>
+
+<body>
+
+
+	<canvas id="myCanvas" width="600" height="300px" style="border:1px solid #d3d3d3;">
+
+
+
+</body>
+</html>
